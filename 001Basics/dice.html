@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>金淑婷圣诞抽奖页面</title>
+    <style>
+        body {
+            font-size: 200px;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <h3>圣诞快乐，金淑婷抽奖页面</h3>
+    <em>希望你运气爆棚，获得心想的礼品</em>
+    <audio id="bgm" src="music/T_R_Y - 圣诞快乐.mp3" preload="auto" autoplay="autoplay" loop="loop"></audio>
+
+    <button>开始抽奖</button>
+    <script>
+        $(function() {
+            $("button").click(function() {
+                var a = Math.random();
+                a = Math.floor(a * 6) + 1;
+                document.write("<img src=\"images/" + a + ".jpg\" />");
+            })
+        })
+    </script>
+</body>
+
+</html>
